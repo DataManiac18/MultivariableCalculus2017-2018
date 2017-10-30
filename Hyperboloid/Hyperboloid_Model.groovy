@@ -1,13 +1,14 @@
 /*
+*
 * This script creates a hyperboloid CAD piece based on the inputted values. Enjoy!
 * - Philip
 */
 
 //To user: Mutate these parameters to change hyperboloid 
-int angle = 40 //steeper angle makes hyperboloid wider
+int angle = 30 //steeper angle makes hyperboloid wider
 int width = 7 //radius of hyperboloid at its thinnest layer (the direct middle)
 int height = 100 //length of each pole (actual heigh of the structure depends on this and the angle
-int resolution = 6 //higher resolution creates finer poles but takes exponentially longer to load
+int resolution = 8 //higher resolution creates finer poles but takes exponentially longer to load
 
 ///Code below will set up and return the hyperboloid/////
 
@@ -52,11 +53,15 @@ for(int i = 0; i < 23; i++){
 stick3 = stick3.rotz(-15).movex(width*Math.cos(Math.toRadians(15))).movey(width*Math.sin(Math.toRadians(15)))
 second = second.union(stick3)
 }
-second.setColor(javafx.scene.paint.Color.BLACK)
 
+second.setColor(javafx.scene.paint.Color.RED)
 
+//uncomment below to export for print
 //stick = stick.union(second)
 
-//CSG bottRing = new Cylinder(width*2, width*2, 120, (int)8).toCSG()
 
-return [second, stick]
+//For computer visualizing:
+return [stick, second]
+
+//For printing:
+//return stick
