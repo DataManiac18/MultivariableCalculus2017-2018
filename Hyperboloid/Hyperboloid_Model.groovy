@@ -54,14 +54,14 @@ stick3 = stick3.rotz(-15).movex(width*Math.cos(Math.toRadians(15))).movey(width*
 second = second.union(stick3)
 }
 
-second.setColor(javafx.scene.paint.Color.RED)
+//second.setColor(javafx.scene.paint.Color.RED)
 
 //uncomment below to export for print
 //stick = stick.union(second)
 
 
 //For computer visualizing:
-return [stick, second]
+//return [stick, second]
 
 //For printing:
-//return stick
+return stick
