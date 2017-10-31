@@ -7,7 +7,7 @@
 //To user: Mutate these parameters to change hyperboloid 
 int angle = 30 //steeper angle makes hyperboloid wider
 int width = 7 //radius of hyperboloid at its thinnest layer (the direct middle)
-int height = 100 //length of each pole (actual heigh of the structure depends on this and the angle
+int height = 100 //length of each pole (actual height of the structure depends on this and the angle
 int resolution = 8 //higher resolution creates finer poles but takes exponentially longer to load
 
 ///Code below will set up and return the hyperboloid/////
